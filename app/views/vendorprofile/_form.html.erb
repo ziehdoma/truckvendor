@@ -1,0 +1,44 @@
+
+
+<%= form_for @vendorprofile, url: newprofile_path , html: {multipart: true} do |f| %>
+	<p>
+		<%= f.label :vendor_name %>
+		<%= f.text_field :name %>
+	</p>
+
+
+	<p>
+		<%= f.label :address %>
+		<%= f.text_field :address %>
+	</p>
+
+
+	<p>
+		<%= f.label :zipcode%>
+		<%= f.text_field :zipcode %>
+	</p>
+
+
+	<p>
+		<%= f.label :call %>
+		<%= f.text_field :phone %>
+	</p>
+
+	<p>
+		<%= f.label :About_us %>
+		<%= f.text_area :description %>
+	</p>
+	<p>
+		<%= f.label :latitude %>
+		<%= f.text_field :latitude %>
+	</p>
+	<p>
+		<%= f.label :longitude %>
+		<%= f.text_field :longitude %>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+
+<% end %>
