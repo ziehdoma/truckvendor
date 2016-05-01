@@ -13,6 +13,8 @@ Welcome
 <p>list of vendors </p>
 <% @vendorprofiles.each do |vendorprofile| %>
 	<%= link_to vendorprofile.name, vendor_path(vendorprofile.id) %> </br>
+	
+          
 
     <% link_to 'Delete', delete_path(vendorprofile.id) %>
 

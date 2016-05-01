@@ -6,24 +6,22 @@
 <%= @vendorprofile.zipcode %> </br>
 
 <strong> phone: </strong>
-<%= @vendorprofile.phone %> </br>
-
-<strong> description </strong>
-<%= @vendorprofile.description %> </br>
+<%= @vendorprofile.phone %> 
+<div class="pull-right">
+	<button onclick="callCustomer('<%= @vendorprofile.phone %>')" type="button" class="btn btn-primary btn-lg call-customer-button">
+		<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+	            Call customer
+	</button>
+</div>
+<p>
+	<strong> description </strong>
+	<%= @vendorprofile.description %> 
+</p>
 <p>
   <strong>Address:</strong>
   <%= @vendorprofile.address %>
 </p>
 
-<p>
-  <strong>Latitude:</strong>
-  <%= @vendorprofile.latitude %>
-</p>
-
-<p>
-  <strong>Longitude:</strong>
-  <%= @vendorprofile.longitude %>
-</p>
 <% if vendor_signed_in? %> 
 <%= link_to 'Edit', edit_path(@vendorprofile) %>
 <%= link_to 'Delete', delete_path(@vendorprofile) %>
